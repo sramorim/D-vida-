@@ -1,0 +1,17 @@
+# SHANDON ELITE — sua nuvem própria (Oracle Cloud Free Tier)
+# Subir na VM: docker compose up --build -d   (após ter o .env)
+
+services:
+  shandon:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    image: shandon-elite:latest
+    container_name: shandon
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data

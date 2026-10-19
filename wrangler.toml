@@ -1,0 +1,20 @@
+name = "shandon-elite"
+main = "src/worker.ts"
+compatibility_date = "2026-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+# Cloudflare Containers configuration
+[[containers]]
+class_name = "ShandonContainer"
+image = "./Dockerfile"
+max_instances = 3
+
+# Durable Objects binding
+[[durable_objects.bindings]]
+name = "SHANDON_CONTAINER"
+class_name = "ShandonContainer"
+
+# Migrations
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["ShandonContainer"]

@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#22D3EE"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" rx="96" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle grid pattern -->
+  <g opacity="0.03" stroke="#fff" stroke-width="0.5">
+    <line x1="0" y1="64" x2="512" y2="64"/>
+    <line x1="0" y1="128" x2="512" y2="128"/>
+    <line x1="0" y1="192" x2="512" y2="192"/>
+    <line x1="0" y1="256" x2="512" y2="256"/>
+    <line x1="0" y1="320" x2="512" y2="320"/>
+    <line x1="0" y1="384" x2="512" y2="384"/>
+    <line x1="0" y1="448" x2="512" y2="448"/>
+    <line x1="64" y1="0" x2="64" y2="512"/>
+    <line x1="128" y1="0" x2="128" y2="512"/>
+    <line x1="192" y1="0" x2="192" y2="512"/>
+    <line x1="256" y1="0" x2="256" y2="512"/>
+    <line x1="320" y1="0" x2="320" y2="512"/>
+    <line x1="384" y1="0" x2="384" y2="512"/>
+    <line x1="448" y1="0" x2="448" y2="512"/>
+  </g>
+
+  <!-- Outer decorative ring -->
+  <circle cx="256" cy="240" r="180" fill="none" stroke="url(#primaryGrad)" stroke-width="1" opacity="0.15"/>
+  
+  <!-- Main shield/hexagon shape -->
+  <g transform="translate(256, 240)" filter="url(#glow)">
+    <!-- Hexagon outline -->
+    <polygon points="0,-120 104,-60 104,60 0,120 -104,60 -104,-60" 
+             fill="none" stroke="url(#primaryGrad)" stroke-width="2" opacity="0.6"/>
+    
+    <!-- Inner hexagon -->
+    <polygon points="0,-90 78,-45 78,45 0,90 -78,45 -78,-45" 
+             fill="none" stroke="url(#accentGrad)" stroke-width="1.5" opacity="0.4"/>
+    
+    <!-- Center S letter -->
+    <text x="0" y="12" text-anchor="middle" dominant-baseline="central"
+          font-family="'Inter', 'SF Pro Display', -apple-system, sans-serif" 
+          font-size="96" font-weight="800" fill="url(#primaryGrad)" 
+          letter-spacing="-2" filter="url(#softGlow)">S</text>
+  </g>
+
+  <!-- Accent dots -->
+  <circle cx="256" cy="80" r="4" fill="#06B6D4" opacity="0.8"/>
+  <circle cx="256" cy="400" r="4" fill="#8B5CF6" opacity="0.8"/>
+  <circle cx="96" cy="240" r="3" fill="#06B6D4" opacity="0.6"/>
+  <circle cx="416" cy="240" r="3" fill="#8B5CF6" opacity="0.6"/>
+
+  <!-- Corner accents -->
+  <g stroke="url(#accentGrad)" stroke-width="1" opacity="0.3" fill="none">
+    <path d="M40,40 L40,60"/>
+    <path d="M40,40 L60,40"/>
+    <path d="M472,40 L472,60"/>
+    <path d="M472,40 L452,40"/>
+    <path d="M40,472 L40,452"/>
+    <path d="M40,472 L60,472"/>
+    <path d="M472,472 L472,452"/>
+    <path d="M472,472 L452,472"/>
+  </g>
+
+  <!-- Bottom text -->
+  <text x="256" y="460" text-anchor="middle" 
+        font-family="'Inter', 'SF Pro Display', -apple-system, sans-serif" 
+        font-size="14" font-weight="600" fill="#94A3B8" 
+        letter-spacing="8">ELITE</text>
+</svg>

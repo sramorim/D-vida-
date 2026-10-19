@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">SHANDON ELITE</string>
+    <string name="title_activity_main">SHANDON ELITE</string>
+    <string name="package_name">com.shandon.elite</string>
+    <string name="custom_url_scheme">com.shandon.elite</string>
+</resources>

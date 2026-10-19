@@ -1,0 +1,22 @@
+{
+  "name": "SHANDON ELITE",
+  "short_name": "SH ELITE",
+  "description": "Plataforma profissional de inteligência e investigação digital",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#05070A",
+  "theme_color": "#05070A",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

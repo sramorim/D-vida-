@@ -1,0 +1,40 @@
+# dependencies
+node_modules
+.next
+.git
+.gitignore
+
+# build artifacts
+*.zip
+*.tar.gz
+
+# documentation
+*.md
+LICENSE
+
+# environment files
+.env
+.env.local
+.env*.local
+
+# data (will be mounted as volume)
+data/
+
+# IDE
+.vscode
+.idea
+
+# OS
+.DS_Store
+Thumbs.db
+
+# temporary
+tmp/
+temp/
+
+# reference files
+reference-frames/
+
+# platform configs
+.vercel
+.railway
